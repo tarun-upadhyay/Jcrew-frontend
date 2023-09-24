@@ -6,10 +6,10 @@ const PrivateRoute = ({ children }) => {
   const { state } = useContext(AppContext);
   console.log(state);
   if (!state.adminAuth && !state.isAuth) {
-    return <Navigate to="/signin" />;
+    return <Navigate to="/Jcrew-frontend/signin" />;
   }
   if (!state.isAuth) {
-    return <Navigate to="/signin" />;
+    return <Navigate to="/Jcrew-frontend/signin" />;
   }
 
   return children;

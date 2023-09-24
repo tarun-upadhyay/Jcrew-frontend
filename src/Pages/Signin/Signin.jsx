@@ -15,7 +15,7 @@ const { state, dispatch } = useContext(AppContext)
           password,
       }
 
-    await fetch("https://comfortable-tick-necklace.cyclic.app/user/login",{
+    await fetch("https://jobsterapi-7zct.onrender.com/api/v1/auth/login",{
           method : "POST",
           headers: {
               'Content-Type': 'application/json',
@@ -29,7 +29,7 @@ const { state, dispatch } = useContext(AppContext)
           window.alert(res.response)
          }else{
           window.alert("SignIn Successfull")
-          navigate("/")
+          navigate("/Jcrew-frontend")
          }
           if(res.token){
             if(email==="admin@admin.com" && password==="Admin123#"){

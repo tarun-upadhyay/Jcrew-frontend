@@ -6,7 +6,7 @@ import App from "./App";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import "./index.css";
-
+const depl = "changing version"
 import "react-loading-skeleton/dist/skeleton.css";
 import { AppContextProvider } from "./Components/AuthContext/AuthcontextProvider";
 const root = ReactDOM.createRoot(document.getElementById("root"));

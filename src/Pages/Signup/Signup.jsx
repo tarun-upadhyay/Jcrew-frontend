@@ -15,7 +15,7 @@ const Signup = () => {
           password,
       }
 
-  await fetch("https://comfortable-tick-necklace.cyclic.app/user/signup",{
+  await fetch("https://jobsterapi-7zct.onrender.com/api/v1/auth/register",{
     method : "POST",
     headers: {
         'Content-Type': 'application/json',
@@ -27,10 +27,10 @@ const Signup = () => {
  
   if(res.status==400){
     window.alert(res.response)
-    navigate("/signin")
+    navigate("/Jcrew-frontend/signin")
    }else{
     window.alert("Signup Successfull")
-    navigate("/")
+    navigate("/Jcrew-frontend")
    }
          
           if(res.token){

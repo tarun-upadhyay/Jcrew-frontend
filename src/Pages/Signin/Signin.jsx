@@ -41,12 +41,12 @@ const { state, dispatch } = useContext(AppContext)
           
               localStorage.setItem("usertoken", res.token)
               dispatch(loginSuccess(res.token))
-          }else{
-            localStorage.setItem("usertoken","")
-          }
+        
+           
+         
          
       })
-      .catch((err) => console.log(err))
+      .catch((err) =>  localStorage.setItem("usertoken",""))
   }
 
 

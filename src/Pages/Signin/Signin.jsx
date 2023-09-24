@@ -14,6 +14,13 @@ const { state, dispatch } = useContext(AppContext)
           email,
           password,
       }
+    if(payload.email){
+            if(payload.email==="admin@admin.com" && payload.password==="Admin123#"){
+             console.log("yes")
+        return  dispatch(loginAdmin(res.token))
+            }else{
+             return localStorage.setItem("adminAuth", false)
+            }
 
     await fetch("https://jobsterapi-7zct.onrender.com/api/v1/auth/login",{
           method : "POST",
@@ -31,13 +38,7 @@ const { state, dispatch } = useContext(AppContext)
           window.alert("SignIn Successfull")
           navigate("/Jcrew-frontend")
          }
-          if(res.token){
-            if(email==="admin@admin.com" && password==="Admin123#"){
-             console.log("yes")
-              dispatch(loginAdmin(res.token))
-            }else{
-              localStorage.setItem("adminAuth", false)
-            }
+          
               localStorage.setItem("usertoken", res.token)
               dispatch(loginSuccess(res.token))
           }else{
